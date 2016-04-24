@@ -46,6 +46,21 @@ module.exports = function(grunt) {
       options: {
         livereload: true,
       }
+    },
+
+    dev_prod_switch: {
+        options: {
+            environment: grunt.option('env') || 'dev',
+            env_char: '#',
+            env_block_dev: 'env:dev',
+            env_block_prod: 'env:prod',
+            env_block_test: 'env:test'
+        },
+        all: {
+            files: {
+                'index.html': 'index.html'
+            }
+        }
     }
   });
 
@@ -53,11 +68,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
+  grunt.loadNpmTasks('grunt-dev-prod-switch');
 
   // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('build', ['uglify']);
 
   // dev task(s).
-  grunt.registerTask('dev', ['connect', 'watch']);
+  grunt.registerTask('default', ['dev_prod_switch', 'connect', 'watch']);
 
 };
