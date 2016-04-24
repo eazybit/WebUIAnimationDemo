@@ -1,0 +1,30 @@
+{
+  "name": "webuianimation",
+  "version": "1.0.0",
+  "description": "web ui animation demo",
+  "main": "index.js",
+  "dependencies": {
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-connect": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-dev-prod-switch": "^0.1.8"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "zyu.1106@gmail.com",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/yxuzhang/WebUIAnimationDemo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yxuzhang/WebUIAnimationDemo/issues"
+  },
+  "homepage": "https://github.com/yxuzhang/WebUIAnimationDemo#readme"
+}
